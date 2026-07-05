@@ -1,0 +1,469 @@
+/* Aryan Sahu - Mechanical Engineering Theme */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #050505;
+    --card: #101010;
+    --silver: #d7d7d7;
+    --gold: #c9a56a;
+    --border: #2a2a2a;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: var(--bg);
+    color: var(--silver);
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    /* Center navbar */
+
+    padding: 10px 40px;
+
+    background: rgba(5, 5, 5, .95);
+
+    border-bottom: 1px solid var(--gold);
+
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: cover;
+    display: block;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--silver);
+    background: #111;
+    border: 1px solid #222;
+    padding: 20px 25px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.nav-links a img {
+    width: 22px;
+    height: 22px;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+    transform: translateY(-3px);
+}
+
+/* HEADER */
+header {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px 40px 20px;
+
+    /* This keeps your original header image */
+    background: 
+        linear-gradient(rgba(5, 5, 5, 0.6), rgba(5, 5, 5, 0.95)), 
+        url('../assets/images/pexels-merlin-14032498_2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Make sure header does NOT have position: absolute or relative here */
+}
+
+header h1 {
+    font-size: 4rem;
+    letter-spacing: 4px;
+    background: linear-gradient(180deg, #fff, #bdbdbd, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    color: var(--gold);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--gold);
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* SKILLS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 120px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+    box-shadow: 0 0 25px rgba(201, 165, 106, .25);
+}
+
+.card img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.card span {
+    font-size: 2rem;
+    color: var(--silver);
+}
+
+/* EDUCATION */
+.education-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.education-card:hover {
+    transform: translateY(-1px);
+    border-color: var(--gold);
+    box-shadow: 0 0 25px rgba(201, 165, 106, .25);
+}
+
+
+.college-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.education-info h3 {
+    color: var(--gold);
+}
+
+.education-info h4 {
+    color: #bbb;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stats div {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 15px 20px;
+    border-radius: 12px;
+    min-width: 120px;
+    text-align: center;
+}
+
+.stats div:hover {
+    transform: translateY(-2px);
+    border-color: var(--gold);
+}
+
+
+.stats h3 {
+    color: var(--gold);
+}
+
+/* CERTIFICATIONS */
+.certifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cert-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+    color: var(--silver);
+    text-decoration: none;
+    transition: .3s;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+.cert-card img {
+    width: 28px;
+    height: 28px;
+}
+
+/* PROJECTS */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    padding: 20px;
+    background: var(--card);
+}
+
+.project-card h3 {
+    color: var(--gold);
+    margin: 20px;
+}
+
+.project-card p {
+    color: #bdbdbd;
+    margin: 0 20px 20px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px;
+}
+
+.project-tags span {
+    background: var(--gold);
+    color: #000;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: .85rem;
+    font-weight: bold;
+}
+
+.project-card a {
+    display: inline-block;
+    margin: 0 20px 25px;
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* CONTACT */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+}
+
+footer {
+    background: #000;
+    color: var(--gold);
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--gold);
+}
+
+@media(max-width:768px) {
+
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .education-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2.7rem;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+}
+
+.logo {
+    width: 100px;
+    height: 50px
+}
+
+.logo img {
+
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 6px solid #ffffff;
+
+    display: block;
+
+    margin: 25px auto 30px auto;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .35);
+}
+
+header p {
+    color: #c9a56a;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.corner-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+}
+
+.corner-logo img {
+    position: absolute;
+    width: 120px;
+    height: auto;
+    display: block;
+}
+.header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* This pushes the image behind the text */
+}
+
+/* Important: The header itself must have relative positioning */
+/* HEADER: Use the img tag approach */
+header {
+    position: relative;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px 40px 20px;
+}
+
+.header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* SKILLS: Use the img tag approach */
+.skills-background {
+    position: relative;
+    overflow: hidden;
+    padding: 60px 20px;
+}
+
+.skills-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}

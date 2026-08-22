@@ -5,21 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aryan Sahu | Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/png" href="assets/images/aslogo.png">
 </head>
 
 <body>
-    <div class="corner-logo">
-        <img src="assets/images/aslogo.png" alt="Aryan Sahu Logo">
-    </div>
+
 
 
 
 
     <header>
-        <img src="assets/images/engine.jpg" class="header-bg">
+        <video src="assets/Video/V1.mp4" class="header-bg" autoplay loop muted playsinline></video>
         <nav class="navbar">
 
 
@@ -58,7 +56,7 @@
         <img src="assets/images/myphoto.jpg" alt="Aryan Sahu" class="profile-pic">
 
         <h1>Aryan Sahu</h1>
-        <p>Mechanical Engineering Student | NSUT | Exploring AI , Design , Innovation</p>
+        <p>Full Stack Developer | Building Scalable Web Apps & Modern UI/UX | NSUT</p>
         <div class="stats">
             <p></p>
             <div>
@@ -84,40 +82,95 @@
     <section id="about">
         <h2>About Me</h2>
         <p>
-            I am a Mechanical Engineering student passionate about technology, artificial intelligence, and
-            problem-solving. I enjoy learning new skills, working on projects, and exploring innovative solutions that
-            combine engineering and modern technology. My goal is to continuously grow both technically and
-            professionally while contributing to impactful projects.
-
+            I am an aspiring Full Stack Developer with a strong foundation in engineering problem-solving. Currently, I
+            am actively learning and experimenting with modern web frameworks to craft responsive, user-centric
+            applications and robust backend systems. I am constantly expanding my knowledge, building hands-on projects,
+            and eager to master new technologies that bridge the gap between design and complex technical
+            implementation.
         </p>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="skills-background">
-        <img src="assets/images/car.jpg" alt="Background Car" class="skills-bg">
-        <h2>Skills</h2>
-        <div class="cards">
+        <h2>Tech Stack</h2>
 
-            <div class="card">
-                <img src="assets/icons/Python.svg" alt="Python">
-                <span>Python</span>
+        <div class="tech-category accordion-category active">
+            <div class="category-header">
+                <h3>Frontend Foundation</h3>
+                <i class="fa-solid fa-chevron-down accordion-icon"></i>
             </div>
-
-            <div class="card">
-                <img src="assets/icons/Ai.svg" alt="AI Tools">
-                <span>AI Tools</span>
+            <div class="category-body">
+                <div class="cards">
+                    <div class="card">
+                        <img src="assets/icons/html.svg" alt="HTML">
+                        <span>HTML5</span>
+                    </div>
+                    <div class="card">
+                        <img src="assets/icons/css.svg" alt="CSS">
+                        <span>CSS3</span>
+                    </div>
+                </div>
             </div>
-
-            <div class="card">
-                <img src="assets/icons/html.svg">
-                <span>HTML</span>
-            </div>
-            <div class="card">
-                <img src="assets/icons/autocad-icon.svg">
-                <span>AutoCAD</span>
-            </div>
-
         </div>
+
+        <div class="tech-category accordion-category">
+            <div class="category-header">
+                <h3>Backend & Logic</h3>
+                <i class="fa-solid fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="category-body">
+                <div class="cards">
+                    <div class="card">
+                        <img src="assets/icons/Python.svg" alt="Python">
+                        <span>Python</span>
+                    </div>
+                    <div class="card">
+                        <img src="assets/icons/JAVA.svg" alt="JAVA">
+                        <span>JAVA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-category accordion-category active">
+            <div class="category-header">
+                <h3>Tools</h3>
+                <i class="fa-solid fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="category-body">
+                <div class="cards">
+
+                    <div class="card">
+                        <i class="fa-brands fa-git-alt" style="font-size: 3rem; color: #f97316;"></i>
+                        <span>Git/GitHub</span>
+                    </div>
+                    <div class="card">
+                        <img src="assets/icons/flow.svg" alt="JAVA">
+                        <span>Google Flow</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tech-category accordion-category active">
+            <div class="category-header">
+                <h3>Frameworks</h3>
+                <i class="fa-solid fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="category-body">
+                <div class="cards">
+
+                    <div class="card">
+                        <img src="assets/icons/Streamlit.svg" alt="Streamlit">
+                        <span>Streamlit</span>
+                    </div>
+                    <div class="card">
+                        <img src="assets/icons/Flask.svg" alt="Flask">
+                        <span>Flask</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
 
 
@@ -202,6 +255,24 @@
         <p>© 2026 Aryan Sahu. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        document.querySelectorAll('.accordion-category').forEach(category => {
+            const header = category.querySelector('.category-header');
+            header.addEventListener('click', () => {
+                const isActive = category.classList.contains('active');
+                
+                // Close all categories first
+                document.querySelectorAll('.accordion-category').forEach(c => {
+                    c.classList.remove('active');
+                });
+                
+                // If the clicked category wasn't active, open it
+                if (!isActive) {
+                    category.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
